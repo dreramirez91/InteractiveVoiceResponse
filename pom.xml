@@ -46,7 +46,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.1.1</version>
         <configuration>
-          <mainClass>ivrs.ivr.App</mainClass>
+          <mainClass>com.ivr.App</mainClass>
           <!-- Additional configuration options if needed -->
         </configuration>
       </plugin>

@@ -1,14 +1,9 @@
-package ivrs.ivr;
+package com.ivr;
 
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Call;
 import com.twilio.type.PhoneNumber;
 import java.net.URI;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
 
 public class MakePhoneCall {
     public static final String ACCOUNT_SID = System.getenv("TWILIO_ACCOUNT_SID");
@@ -25,7 +20,7 @@ public class MakePhoneCall {
                 new com.twilio.type.PhoneNumber(to),
                 new com.twilio.type.PhoneNumber(from),
                 URI.create("http://demo.twilio.com/docs/voice.xml"))
-            .create();
+                .create();
         System.out.println(call.getSid());
         System.out.println("Call successful");
     }
