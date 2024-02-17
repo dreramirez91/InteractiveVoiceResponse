@@ -20,9 +20,25 @@ import java.net.URI;
                 new com.twilio.type.PhoneNumber(to),
                 new com.twilio.type.PhoneNumber(from),
 <span class="nc" id="L22">                URI.create(&quot;http://demo.twilio.com/docs/voice.xml&quot;))</span>
-<span class="nc" id="L23">            .create();</span>
+<span class="nc" id="L23">                .create();</span>
 <span class="nc" id="L24">        System.out.println(call.getSid());</span>
 <span class="nc" id="L25">        System.out.println(&quot;Call successful&quot;);</span>
 <span class="nc" id="L26">    }</span>
+
+    public static void MakeCall(String xml) {
+<span class="nc" id="L29">        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);</span>
+
+<span class="nc" id="L31">        String from = &quot;+18557293451&quot;;</span>
+<span class="nc" id="L32">        String to = &quot;+19015132888&quot;;</span>
+
+<span class="nc" id="L34">        System.out.println(&quot;Call initiated&quot;);</span>
+<span class="nc" id="L35">        Call call = Call.creator(</span>
+                new com.twilio.type.PhoneNumber(to),
+                new com.twilio.type.PhoneNumber(from),
+<span class="nc" id="L38">                URI.create(xml))</span>
+<span class="nc" id="L39">                .create();</span>
+<span class="nc" id="L40">        System.out.println(call.getSid());</span>
+<span class="nc" id="L41">        System.out.println(&quot;Call successful&quot;);</span>
+<span class="nc" id="L42">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
