@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ClassInspector.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ivr</a> &gt; <a href="index.source.html" class="el_package">com.ivr</a> &gt; <span class="el_source">ClassInspector.java</span></div><h1>ClassInspector.java</h1><pre class="source lang-java linenums">package com.ivr;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
+<span class="nc" id="L6">public class ClassInspector {</span>
+
+    public static void inspect(Object obj) {
+        // Get the class of the object
+<span class="nc" id="L10">        Class&lt;?&gt; clazz = obj.getClass();</span>
+
+        // Display class name
+<span class="nc" id="L13">        System.out.println(&quot;Class: &quot; + clazz.getName());</span>
+
+        // Display fields
+<span class="nc" id="L16">        System.out.println(&quot;Fields:&quot;);</span>
+<span class="nc" id="L17">        Field[] fields = clazz.getDeclaredFields();</span>
+<span class="nc bnc" id="L18" title="All 2 branches missed.">        for (Field field : fields) {</span>
+<span class="nc" id="L19">            System.out.println(&quot;  &quot; + field.getName() + &quot; (&quot; + field.getType().getName() + &quot;)&quot;);</span>
+        }
+
+        // Display methods
+<span class="nc" id="L23">        System.out.println(&quot;Methods:&quot;);</span>
+<span class="nc" id="L24">        Method[] methods = clazz.getDeclaredMethods();</span>
+<span class="nc bnc" id="L25" title="All 2 branches missed.">        for (Method method : methods) {</span>
+<span class="nc" id="L26">            System.out.println(&quot;  &quot; + method.getName());</span>
+        }
+<span class="nc" id="L28">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

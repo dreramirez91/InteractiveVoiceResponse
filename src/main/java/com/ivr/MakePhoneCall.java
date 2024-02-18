@@ -19,9 +19,13 @@ public class MakePhoneCall {
         Call call = Call.creator(
                 new com.twilio.type.PhoneNumber(to),
                 new com.twilio.type.PhoneNumber(from),
-                URI.create("http://demo.twilio.com/docs/voice.xml"))
+                URI.create("https://handler.twilio.com/twiml/EH87dacaf7961c2217c2b59e1ade78cedf"))
                 .create();
         System.out.println(call.getSid());
+        System.out.println("\n\n");
+        System.out.println(call);
+        // ClassInspector.inspect(call);
+        System.out.println("\n\n");
         System.out.println("Call successful");
     }
 
