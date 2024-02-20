@@ -1,4 +1,0 @@
-<Response>
-    <Say voice="man">Cash rules everything around me CREAM get the money, dolla dolla bill y'all</Say>
-    <Play>http://demo.twilio.com/docs/classic.mp3</Play>
-</Response>

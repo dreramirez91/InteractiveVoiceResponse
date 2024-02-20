@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <!-- <Say>Cash rules everything around me, CREAM, get the money, dolla dolla bill y'all</Say> -->
+    <Say>Cash rules everything around me, CREAM, get the money, dolla dolla bill y'all</Say>
     <Gather input="speech dtmf" timeout="3" numDigits="1">
         <Say>Please press 1, 2, 3.</Say>
     </Gather>
-    <!-- <Play>https://audio.jukehost.co.uk/kpLdLGNnUtGFZ0JhEjTT9DR5v82t6n7m</Play> -->
+    <Play>https://audio.jukehost.co.uk/kpLdLGNnUtGFZ0JhEjTT9DR5v82t6n7m</Play>
 </Response>
