@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Say>Welcome to our service. For assistance, press 1. To learn more about our offerings, press
+        2. If you have a specific inquiry, press 3.</Say>
+    <Gather input="speech dtmf" timeout="3" numDigits="1">
+        <Say>Please press 1, 2, 3 for the respective options.</Say>
+    </Gather>
+    <Play>https://audio.jukehost.co.uk/kpLdLGNnUtGFZ0JhEjTT9DR5v82t6n7m</Play>
+</Response>
