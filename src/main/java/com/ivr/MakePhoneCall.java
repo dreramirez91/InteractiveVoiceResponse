@@ -12,8 +12,8 @@ public class MakePhoneCall {
     public static void MakeCall() {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-        String from = "+18557293451";
-        String to = "+19015132888";
+        String from = System.getenv("TWILIO_PHONE_NUMBER");
+        String to = System.getenv("MY_PHONE_NUMBER");
 
         System.out.println("Call initiated");
         Call call = Call.creator(
@@ -24,24 +24,7 @@ public class MakePhoneCall {
         System.out.println(call.getSid());
         System.out.println("\n\n");
         System.out.println(call);
-        // ClassInspector.inspect(call);
         System.out.println("\n\n");
-        System.out.println("Call successful");
-    }
-
-    public static void MakeCall(String xml) {
-        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
-
-        String from = "TWILIO_PHONE_NUMBER";
-        String to = System.getenv("MY_PHONE_NUMBER");
-
-        System.out.println("Call initiated");
-        Call call = Call.creator(
-                new com.twilio.type.PhoneNumber(to),
-                new com.twilio.type.PhoneNumber(from),
-                URI.create(xml))
-                .create();
-        System.out.println(call.getSid());
         System.out.println("Call successful");
     }
 }
