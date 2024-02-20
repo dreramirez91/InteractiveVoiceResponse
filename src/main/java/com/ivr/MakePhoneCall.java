@@ -32,8 +32,8 @@ public class MakePhoneCall {
     public static void MakeCall(String xml) {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-        String from = "+18557293451";
-        String to = "+19015132888";
+        String from = "TWILIO_PHONE_NUMBER";
+        String to = System.getenv("MY_PHONE_NUMBER");
 
         System.out.println("Call initiated");
         Call call = Call.creator(

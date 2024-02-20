@@ -32,8 +32,8 @@ import java.net.URI;
     public static void MakeCall(String xml) {
 <span class="nc" id="L33">        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);</span>
 
-<span class="nc" id="L35">        String from = &quot;+18557293451&quot;;</span>
-<span class="nc" id="L36">        String to = &quot;+19015132888&quot;;</span>
+<span class="nc" id="L35">        String from = &quot;TWILIO_PHONE_NUMBER&quot;;</span>
+<span class="nc" id="L36">        String to = System.getenv(&quot;MY_PHONE_NUMBER&quot;);</span>
 
 <span class="nc" id="L38">        System.out.println(&quot;Call initiated&quot;);</span>
 <span class="nc" id="L39">        Call call = Call.creator(</span>

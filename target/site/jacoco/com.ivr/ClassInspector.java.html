@@ -6,25 +6,22 @@ import java.lang.reflect.Method;
 <span class="nc" id="L6">public class ClassInspector {</span>
 
     public static void inspect(Object obj) {
-        // Get the class of the object
+
 <span class="nc" id="L10">        Class&lt;?&gt; clazz = obj.getClass();</span>
 
-        // Display class name
-<span class="nc" id="L13">        System.out.println(&quot;Class: &quot; + clazz.getName());</span>
+<span class="nc" id="L12">        System.out.println(&quot;Class: &quot; + clazz.getName());</span>
 
-        // Display fields
-<span class="nc" id="L16">        System.out.println(&quot;Fields:&quot;);</span>
-<span class="nc" id="L17">        Field[] fields = clazz.getDeclaredFields();</span>
-<span class="nc bnc" id="L18" title="All 2 branches missed.">        for (Field field : fields) {</span>
-<span class="nc" id="L19">            System.out.println(&quot;  &quot; + field.getName() + &quot; (&quot; + field.getType().getName() + &quot;)&quot;);</span>
+<span class="nc" id="L14">        System.out.println(&quot;Fields:&quot;);</span>
+<span class="nc" id="L15">        Field[] fields = clazz.getDeclaredFields();</span>
+<span class="nc bnc" id="L16" title="All 2 branches missed.">        for (Field field : fields) {</span>
+<span class="nc" id="L17">            System.out.println(&quot;  &quot; + field.getName() + &quot; (&quot; + field.getType().getName() + &quot;)&quot;);</span>
         }
 
-        // Display methods
-<span class="nc" id="L23">        System.out.println(&quot;Methods:&quot;);</span>
-<span class="nc" id="L24">        Method[] methods = clazz.getDeclaredMethods();</span>
-<span class="nc bnc" id="L25" title="All 2 branches missed.">        for (Method method : methods) {</span>
-<span class="nc" id="L26">            System.out.println(&quot;  &quot; + method.getName());</span>
+<span class="nc" id="L20">        System.out.println(&quot;Methods:&quot;);</span>
+<span class="nc" id="L21">        Method[] methods = clazz.getDeclaredMethods();</span>
+<span class="nc bnc" id="L22" title="All 2 branches missed.">        for (Method method : methods) {</span>
+<span class="nc" id="L23">            System.out.println(&quot;  &quot; + method.getName());</span>
         }
-<span class="nc" id="L28">    }</span>
+<span class="nc" id="L25">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
